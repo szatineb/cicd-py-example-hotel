@@ -17,7 +17,7 @@ class TestHootel(object):
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
         print(self.browser.get_window_size())
-        self.browser.set_window_size(1920, 1080)
+        self.browser.set_window_size(1024, 768)
         print(self.browser.get_window_size())
 
     def teardown_method(self):
