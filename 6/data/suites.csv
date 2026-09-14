@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Egy oldalon megjelenitett szallashelyek szama","1101","Szallashelyek listazasa","test","2026-09-14","passed","2026-09-14","TestHootel","test_hootel","",""
+"A belépés tesztelése","1562","Hootel Login","test","2026-09-14","passed","2026-09-14","TestHootel","test_hootel","",""
