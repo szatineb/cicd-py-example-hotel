@@ -11,11 +11,18 @@ class TestHootel(object):
         URL = 'http://hotel-v3.progmasters.hu/'
         options = Options()
         options.add_experimental_option("detach", True)
+        options.add_argument('--guest')
+        options.add_argument('--start-maximized')
+        options.add_argument('--headless')
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
+        print(self.browser.get_window_size())
+        self.browser.set_window_size(1920, 1080)
+        print(self.browser.get_window_size())
 
     def teardown_method(self):
-        self.browser.quit()
+        # self.browser.quit()
+        pass
 
     @allure.title("Hootel Login")
     @allure.description("A belépés tesztelése")
@@ -23,6 +30,7 @@ class TestHootel(object):
     @allure.tag("login")
     def test_login(self):
         login_btn = self.browser.find_element(By.XPATH, '//a[@class="nav-link"]')
+        # time.sleep(1)
         login_btn.click()
 
         email_input = self.browser.find_element(By.ID, 'email')
