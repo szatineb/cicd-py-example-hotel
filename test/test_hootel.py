@@ -5,6 +5,13 @@ from selenium.webdriver.common.by import By
 import allure
 import pytest
 
+USERS = {
+    'goodUser': {
+        'email': 'hiwasi1765@wisnick.com',
+        'password': 'tesztelek2021'
+    }
+}
+
 
 class TestHootel(object):
     def setup_method(self):
@@ -34,10 +41,10 @@ class TestHootel(object):
         login_btn.click()
 
         email_input = self.browser.find_element(By.ID, 'email')
-        email_input.send_keys('hiwasi1765@wisnick.com')
-
+        email_input.send_keys(USERS['goodUser']['email'])
         password_input = self.browser.find_element(By.ID, 'password')
-        password_input.send_keys('tesztelek2021')
+
+        password_input.send_keys(USERS['goodUser']['password'])
 
         submit_btn = self.browser.find_element(By.NAME, 'submit')
         submit_btn.click()
